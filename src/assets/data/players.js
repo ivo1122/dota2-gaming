@@ -1,33 +1,40 @@
+import topson from "../images/topson.png"
+import mc from "../images/mind-control.png"
+import zai from "../images/zai.png"
+
+
 export const players = [
     {
         id: "01",
-        name: "Dr. Alfaz Ahmed",
-        specialty: "Surgeon",
+        name: "Ivan Ivanov",
+        position: "Offlane",
         avgRating: 4.8,
         totalRating: 272,
-        photo: doctorImg01,
-        totalPatients: 1500,
-        hospital: "Mount Adora Hospital, Sylhet.",
+        photo: mc,
+        coaching:"Over 300 players coached",
+        team: "Team Nigma",
       },
       {
         id: "02",
-        name: "Dr. Saleh Mahmud",
-        specialty: "Neurologist",
+        name: "Topias Taavitsainen",
+        position: "Mid",
         avgRating: 4.8,
         totalRating: 272,
-        photo: doctorImg02,
-        totalPatients: 1500,
-        hospital: "Mount Adora Hospital, Sylhet.",
+        photo: topson,
+        coaching:"Over 500 players coached",
+
+        team: "Team Tundra",
       },
       {
         id: "03",
-        name: "Dr. Farid Uddin",
-        specialty: "Dermatologist",
+        name: "Ludwig Wahlberg",
+        position: "Offlane",
         avgRating: 4.8,
         totalRating: 272,
-        photo: doctorImg03,
-        totalPatients: 1500,
-        hospital: "Mount Adora Hospital, Sylhet.",
+        photo: zai,
+        coaching:"Over 400 players coached",
+
+        team: "Team Liquid",
       },
     
 ]
