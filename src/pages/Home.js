@@ -14,6 +14,10 @@ import CoachesList from "../components/Coaches/CoachesList";
 import FaqList from "../components/Faq/FaqList";
 import Testimonial from "../components/Testimonial";
 
+import { motion } from "framer-motion";
+import { staggerContainer,fadeIn,plateVariants } from "../assets/variants/variants";
+
+
 import { BsArrowRight } from "react-icons/bs";
 
 const Home = () => {
@@ -26,57 +30,57 @@ const Home = () => {
             {/*========hero content======== */}
             <div>
               <div className="lg:w-[570px]">
-                <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]">
+                <motion.h1 variants={fadeIn("down", "tween", 0.2, 1.1)} initial="hidden" whileInView={"show"} className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]">
                   We help players make better performances
-                </h1>
-                <p className="text__para">
+                </motion.h1>
+                <motion.p variants={fadeIn("down","tween", 0.3 , 1.1)} initial="hidden" whileInView={"show"} className="text__para">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                   cursus molestie urna quis pulvinar. Aliquam tellus eros,
                   posuere eget interdum eget, varius vel nunc. Proin nec euismod
-                  dolor
-                </p>
+                  dolor.
+                </motion.p>
 
-                <button className="btn">Request an Appointment</button>
+                <motion.button variants={fadeIn("down","tween", 0.4 , 1.1)} initial="hidden" whileInView={"show"} className="btn">Request an Appointment</motion.button>
               </div>
               {/*========hero counter========= */}
               <div className="mt-[30px] lg;mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
-                <div>
+                <motion.div variants={fadeIn("down","tween", 0.6 , 1.1)} initial="hidden" whileInView={"show"}>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                     10+
                   </h2>
                   <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[14px]"></span>
                   <p className="text__para">Years of Experience</p>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fadeIn("down","tween", 0.7 , 1.1)} initial="hidden" whileInView={"show"}>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                     15+
                   </h2>
                   <span className="w-[100px] h-2 bg-purpleColor rounded-full block mt-[14px]"></span>
                   <p className="text__para">Locations</p>
-                </div>
+                </motion.div>
 
-                <div>
+                <motion.div variants={fadeIn("down","tween", 0.8 , 1.1)} initial="hidden" whileInView={"show"}>
                   <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                     100%
                   </h2>
                   <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[14px]"></span>
                   <p className="text__para">Players satisfaction</p>
-                </div>
+                </motion.div>
               </div>
             </div>
             {/*========hero content======== */}
 
-            <div className="flex gap-[30px] justify-end">
+            <motion.div variants={staggerContainer} initial="hidden" whileInView={"show"} viewport={{once:false, amount:0.6}} className="flex gap-[30px] justify-end">
               <div>
-                <img className=" w-full" src={heroImg03} alt="" />
+                <motion.img variants={fadeIn("right", "tween", 0.2,1.8)} className=" w-full" src={heroImg03} alt="" />
               </div>
 
               <div>
-                <img className="w-full mb-[30px] " src={heroImg02} alt="" />
-                <img className="w-full" src={heroImg01} alt="" />
+                <motion.img variants={fadeIn("left", "tween", 0.4,1.8)} className="w-full mb-[30px] " src={heroImg02} alt="" />
+                <motion.img variants={fadeIn("left", "tween", 0.6,1.8)} className="w-full" src={heroImg01} alt="" />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -84,19 +88,19 @@ const Home = () => {
       {/*========hero section end========== */}
 
       <section>
-        <div className="container">
+        <motion.div variants={staggerContainer} whileInView={"show"} initial="hidden" className="container">
           <div className="lg:w-[470px] mx-auto">
-            <h2 className="heading text-center">
+            <motion.h2 variants={fadeIn("right", "tween", 0.2,1.3)}  className="heading text-center">
               Providing the best gaming services
-            </h2>
-            <p className="text__para text-center">
+            </motion.h2>
+            <motion.p variants={fadeIn("right", "tween", 0.3,1.3)} className="text__para text-center">
               World-class care for everyone. Our systems offer unmatched expert
               coaching for players.
-            </p>
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]">
-            <div className="py-[30px] px-5">
+            <motion.div variants={fadeIn("right", "tween", 0.4,1)} initial="hidden" whileInView={"show"} className="py-[30px] px-5">
               <div className="flex items-center justify-center">
                 <img className="w-[150px]" src={esportsIcon} alt="" />
               </div>
@@ -116,9 +120,9 @@ const Home = () => {
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="py-[30px] px-5">
+            <motion.div variants={fadeIn("right", "tween", 0.6,1.2)} initial="hidden" whileInView={"show"} className="py-[30px] px-5">
               <div className="flex items-center justify-center">
                 <img className="w-[150px]" src={roles} alt="" />
               </div>
@@ -128,7 +132,7 @@ const Home = () => {
                 </h2>
                 <p className="text-[16px] leading-7 text-textColor font-[400] mt-4 text-center">
                   At what position have you been struggling recently? Improve
-                  your overall gameplay, let our experts guide you!
+                  your overall gameplay with coaching, let our experts guide you!
                 </p>
                 <Link
                   to="/players"
@@ -137,9 +141,9 @@ const Home = () => {
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="py-[30px] px-5">
+            <motion.div variants={fadeIn("right", "tween", 0.8,1.4)} initial="hidden" whileInView={"show"} className="py-[30px] px-5">
               <div className="flex items-center justify-center">
                 <img className="w-[150px]" src={appointment} alt="" />
               </div>
@@ -159,9 +163,9 @@ const Home = () => {
                   <BsArrowRight className="group-hover:text-white w-6 h-5" />
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
       {/*============about section start=========== */}
       <About />

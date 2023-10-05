@@ -2,16 +2,19 @@ import React from "react";
 import zai from "../assets/images/zai.png"
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+import { staggerContainer,fadeIn,plateVariants } from "../assets/variants/variants";
+
 
 
 const About = () => {
   return (
     <section>
-      <div className="container">
+      <motion.div variants={staggerContainer} initial="hidden" whileInView={"show"} viewport={{once:false, amount:0.6}} className="container">
         <div className="flex justify-between gap-[50px] lg:gap-[130px] xl:gap-0 flex-col lg:flex-row">
             {/*=========about image========== */}
                 <div className="relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1">
-                    <img src={zai}/>
+                    <motion.img variants={plateVariants} src={zai}/>
                     <div className="absolute z-20 bottom-4 w-[200px] md:w-[300px] right-[-30%] md:right-[-7%] lg:right-[-22%]">
 {/*                         <img src={heroImg03} alt="/"/>
  */}                    </div>
@@ -27,7 +30,7 @@ const About = () => {
         </Link>
       </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
