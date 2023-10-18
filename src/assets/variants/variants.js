@@ -68,3 +68,13 @@ export const indexFadeIn = (direction, type, delay, duration) => {
   };
 };
 
+
+const textAnimation = {
+  hidden:{
+    opacity:0,
+  },
+  visible: {
+    opacity:1
+  }
+
+}

@@ -36,5 +36,16 @@ export const players = [
 
         team: "Team Liquid",
       },
+      {
+        id: "03",
+        name: "Ludwig Wahlberg",
+        position: "Offlane",
+        avgRating: 4.8,
+        totalRating: 272,
+        photo: zai,
+        coaching:"Over 400 players coached",
+
+        team: "Team Liquid",
+      },
     
 ]
