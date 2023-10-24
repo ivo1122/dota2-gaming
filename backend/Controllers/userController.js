@@ -1,10 +1,10 @@
 import User from "../models/UserSchema.js";
 
-export const updatedUser = async (req, res) => {
+export const updateUser = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const updatedUser = await User.findByIdAndUpdate(
+     const updatedUser = await User.findByIdAndUpdate(
       id,
       { $set: req.body },
       { new: true }
@@ -24,7 +24,7 @@ export const deleteUser = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const deletedUser = await User.findByIdAndDelete(id);
+    await User.findByIdAndDelete(id);
 
     res.status(200).json({ success: true, message: "Successfully deleted" });
   } catch (err) {
@@ -48,19 +48,18 @@ export const getSingleUser = async (req, res) => {
   }
 };
 
-
 export const getAllUser = async (req, res) => {
-    const id = req.params.id;
-  
-    try {
-      const users = await User.find({}).select("-password");
-  
-      res.status(200).json({
-        succes: true,
-        message: "Users found",
-        data: users,
-      });
-    } catch (err) {
-      res.status(404).json({ success: false, message: "Not found" });
-    }
-  };
+  const id = req.params.id;
+
+  try {
+    const users = await User.find({}).select("-password");
+
+    res.status(200).json({
+      succes: true,
+      message: "Users found",
+      data: users,
+    });
+  } catch (err) {
+    res.status(404).json({ success: false, message: "Not found" });
+  }
+};

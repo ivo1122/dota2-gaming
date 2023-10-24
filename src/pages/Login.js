@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../config";
 import { toast } from "react-toastify";
 import { authContext } from "../context/AuthContex.js";
+import HashLoader from "react-spinners/HashLoader"
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +20,13 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const submitHandler = async (e) => {
-    e.preventDefault()
-    setLoading(true);
-    
+ 
+
+  const submitHandler = async (event)=> {
+    console.log(event)
+    event.preventDefault()
+    setLoading(true); 
+     
 
     try {
       const res = await fetch(`${BASE_URL}auth/login`, {
@@ -47,7 +51,7 @@ const Login = () => {
         },
       });
 
-      console.log(result);
+      console.log(result, "login data");
 
       setLoading(false);
       toast.success(result.message);
@@ -92,7 +96,7 @@ const Login = () => {
               type="submit"
               className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
             >
-              Submit
+              {loading ? <HashLoader size={25} color= "#fffff"/> : "Login"}
             </button>
           </div>
           <p className="mt-5 text-textColor text-center">

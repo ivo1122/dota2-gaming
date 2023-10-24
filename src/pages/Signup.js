@@ -38,12 +38,12 @@ const Signup = () => {
     setFormData({ ...formData, photo: data.url });
   };
 
-  const submitHandler = async (e) => {
-    e.preventDefault();
+  const submitHandler = async event => {
+    event.preventDefault();
     setLoading(true);
 
     try {
-      const res = await fetch(`${BASE_URL}/auth/register`, {
+      const res = await fetch(`${BASE_URL}auth/register`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

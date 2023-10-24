@@ -1,7 +1,9 @@
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
+import {authContext} from ".././context/AuthContex"
+
 
 import doctorAvatar from "../assets/images/doctor-icon-avatar.png";
 
@@ -30,6 +32,7 @@ const Header = () => {
 
 const headerRef= useRef(null)
 const menuRef = useRef(null)
+const {user,role,token} = useContext(authContext)
 
 
 const handleStickyHeader = () => {
@@ -87,23 +90,26 @@ const toggleMenu = () => menuRef.current.classList.toggle("show__menu")
 
           {/*==========nav right =======*/}
           <div className="flex items-center gap-4">
-            <div className="hidden">
-              <Link to="/">
+
+            {
+              token && user ?             <div>
+              <Link to={`${role==="coach" ? "/coaches/profile/me" : "/users/profile/me"}`}>
                 <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
                   <img
-                    src={doctorAvatar}
+                    src={user?.photo}
                     alt=""
                     className="w-full rounded-full"
                   />
                 </figure>
               </Link>
-            </div>
-
-            <Link to="login">
+            </div> :             <Link to="login">
               <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]">
                 Login
               </button>
             </Link>
+            }
+
+
 
             <span className="md:hidden" onClick={toggleMenu}>
               <BiMenu className="w-6 h-6 cursor-pointer"/>
