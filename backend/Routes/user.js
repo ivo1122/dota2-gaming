@@ -16,7 +16,7 @@ router.get("/",authenticate,restrict(["admin"]), getAllUser);
 router.put("/:id",authenticate,restrict(["player"]), updateUser);
 router.delete("/:id",authenticate,restrict(["player"]), deleteUser);
 router.get("/profile/me",authenticate,restrict(["player"]), getUserProfile);
-router.get("appointments/my-appointments",authenticate,restrict(["player"]), getMyAppointments);
+router.get("/appointments/my-appointments",authenticate,restrict(["player"]), getMyAppointments);
 
 
 export default router;

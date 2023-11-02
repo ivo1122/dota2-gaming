@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import signUp from "../assets/images/signup.gif";
-import avatar from "../assets/images/avatar.png";
 import { BASE_URL } from "../config";
 import { toast } from "react-toastify";
 import HashLoader from "react-spinners/HashLoader";
@@ -33,6 +32,7 @@ const Signup = () => {
     //later I will use cloudinary to upload images
 
     const data = await uploadImageToCloudinary(file);
+    console.log(data)
     setPreviewURL(data.url);
     setSelectedFile(data.url);
     setFormData({ ...formData, photo: data.url });

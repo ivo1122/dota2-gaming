@@ -3,9 +3,8 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import avatar from "../../src/assets/images/avatar.png";
 import { HiStar } from "react-icons/hi";
-import patient from "../assets/images/patient.png";
+import user from "../assets/images/user.png";
 
 const Testimonial = () => {
   return (
@@ -24,11 +23,11 @@ const Testimonial = () => {
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+              <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  John Doe
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[18px]" />
@@ -40,42 +39,43 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              These guys are great , I have been following them for a while now.
+              Great service,thanks.
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+            <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  Marcos Lugiano
                 </h4>
                 <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                 </div>
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              The price is over the roof, I am not satisfied.
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+            <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  Anthony Merge
                 </h4>
                 <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
@@ -84,17 +84,19 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              Have been waiting for a collaboration like this!
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+            <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  Edward Angels
                 </h4>
                 <div className="flex items-center gap-[2px]">
                   <HiStar className="text-yellowColor w-[18px]" />
@@ -106,42 +108,41 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              Working with these guys for months now, I am very satisfied!
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+            <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  Mary Hopkins
                 </h4>
                 <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                 </div>
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              I booked appointment and nobody appeared...
+            </p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="py-[30px] px-5 rounded-[13px]">
             <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
+            <img src={user} alt="/" className="w-[30px] h-[30px]"/>
               <div>
                 {" "}
                 <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
+                  Roger Edward
                 </h4>
                 <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
                   <HiStar className="text-yellowColor w-[18px]" />
@@ -150,30 +151,12 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
+            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">
+              Quite satisfied{" "}
+            </p>
           </div>
-        </SwiperSlide>        <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={patient} alt="/" />
-              <div>
-                {" "}
-                <h4 className="text-[18px] leading-[30px] font-semibold text-headinColog">
-                  John Rashford
-                </h4>
-                <div className="flex items-center gap-[2px]">
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                  <HiStar className="text-yellowColor w-[18px]" />
-                </div>
-              </div>
-            </div>
+        </SwiperSlide>{" "}
 
-            <p className="text-[16px] leading-7 mt-4 text-textColor font-[400]">I watched all their games back then when they were active players. All of them played on TI and stayed in pro scene for years. They make great coaches.</p>
-          </div>
-        </SwiperSlide>
       </Swiper>
     </div>
   );

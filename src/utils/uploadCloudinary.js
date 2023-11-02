@@ -1,7 +1,7 @@
 
 
-const cloud_name = "gaming-booking"
-const upload_preset = "dnjnebr1s" //cloudinary
+const cloud_name = "dnjnebr1s"
+const upload_preset = "gaming-booking" //cloudinary
 
 const uploadImageToCloudinary = async file => {
   const uploadData = new FormData();

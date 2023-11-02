@@ -4,8 +4,6 @@ import logo from "../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { authContext } from ".././context/AuthContex";
 
-import doctorAvatar from "../assets/images/doctor-icon-avatar.png";
-
 import { BiMenu } from "react-icons/bi";
 
 const navLinks = [
@@ -15,7 +13,7 @@ const navLinks = [
   },
   {
     path: "/players",
-    display: "Find a Player",
+    display: "Find a Coach",
   },
   {
     path: "/services",
@@ -98,20 +96,24 @@ const Header = () => {
                       : "/users/profile/me"
                   }`}
                 >
+                  <div className="w-full flex items-center text-center justify-center">
+                  <h3 className="text-headingColor font-bold capitalize mr-5">{user?.name}</h3>
                   <figure className="w-[35px] h-[35px] rounded-full cursor-pointer">
                     <img
                       src={user?.photo}
                       alt=""
                       className="w-full rounded-full"
                     />
+                     
                   </figure>
-                  <h2>{user?.name}</h2>
+                  </div>
+     
                 </Link>
               </div>
             ) : (
               <Link to="login">
                 <button className="bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]">
-                  Login
+                  Login 
                 </button>
               </Link>
             )}

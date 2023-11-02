@@ -18,10 +18,10 @@ export const players = [
         id: "02",
         name: "Topias Taavitsainen",
         position: "Mid",
-        avgRating: 4.8,
+        avgRating: 4.9,
         totalRating: 272,
         photo: topson,
-        coaching:"Over 500 players coached",
+        coaching:"Over 450 players coached",
 
         team: "Team Tundra",
       },
@@ -40,8 +40,8 @@ export const players = [
         id: "03",
         name: "Ludwig Wahlberg",
         position: "Offlane",
-        avgRating: 4.8,
-        totalRating: 272,
+        avgRating: 4.2,
+        totalRating: 232,
         photo: zai,
         coaching:"Over 400 players coached",
 
